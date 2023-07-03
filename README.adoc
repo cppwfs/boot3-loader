@@ -1,4 +1,4 @@
-= Spring Batch Job Task
+= Boot 3 Batch Loader
 
 Te purpose of this project is to provide a simple batch app that runs a single item reader and writer that can be natively compiled and run en-masse to load a database.
 
