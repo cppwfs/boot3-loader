@@ -1,17 +1,18 @@
 = Boot 3 Batch Loader
 
-Te purpose of this project is to provide a simple batch app that runs a single item reader and writer that can be natively compiled and run en-masse to load a database.
+Te purpose of this project is to provide a simple boot app loads the specified number of task executions paired with one batch job that contains one reader and writer  load a database with the specified batch and task executions .
 
 
 
 == Requirements:
 
-* Java 17 or Above
+* Java 8 or Above
 
 == Classes:
 
-* BatchJobApplication - the Spring Boot Main Application
-* JobConfiguration - the configuration for the Spring Batch jobs
+* Boot3LoaderApplication - the Spring Boot Main Application
+* BatchTaskConfiguration - the configuration for the Spring Batch jobs
+* Boot3LoadProperties - the properties on how the database should be loaded
 
 == Build:
 
@@ -20,34 +21,9 @@ Te purpose of this project is to provide a simple batch app that runs a single i
 mvn clean package
 ----
 
-== Native Build:
-
-[source,shell]
-----
-mvn -Pnative native:compile
-----
-
-== Native Run:
-
-[source,shell]
-----
-./target/batch-job
-----
-
-== BulkLoad:
-To load a large number of batch instances a `loadEmUp.sh` script.
-It runs the natively compile version of the application for the specified number of times. i.e.:
-
-== Load a database:
-
-[source,shell]
-----
-./loadEmUp.sh <number of batch executions>
-----
-
 == Run:
 
 [source,shell]
 ----
-java -jar target/batch-job-3.0.0.jar
+java -jar target/boot3-loader-0.0.1-SNAPSHOT.jar --jobsToCreate=<your desired total tasks/jobs.  Defaults to 10.>
 ----

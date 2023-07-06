@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.spring.cloud</groupId>
-	<artifactId>batch-job</artifactId>
+	<artifactId>boot3-loader</artifactId>
 	<packaging>jar</packaging>
-	<version>3.1.0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<description>Spring Cloud Task Batch Example</description>
 
 	<name>Batch Job Sample Application</name>
@@ -27,7 +27,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-task-dependencies</artifactId>
-				<version>${project.version}</version>
+				<version>3.0.1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
